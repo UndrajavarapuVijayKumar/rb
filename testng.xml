@@ -1,0 +1,11 @@
+<test name="Regression1" preserve-order="false">
+    <classes>
+        <class name="test.Test1">
+            <methods>
+                <include name="m1"/>
+                <include name="m2"/>
+            </methods>
+        </class>
+        <class name="test.Test2"/>
+    </classes>
+</test>
