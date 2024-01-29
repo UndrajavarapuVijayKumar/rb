@@ -6,6 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import java.time.Duration;
 
@@ -33,6 +34,7 @@ public class rb_WebdriverUtility {
 
     }
     public static void launchBrowser(String URL){
+
         driver.get(URL);
     }
     public static void type(By locator, String value){
@@ -46,6 +48,9 @@ public class rb_WebdriverUtility {
 //        wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(locator));
         driver.findElement(locator).click();
         Thread.sleep(3000);
+    }
+    public static void assertion(String ErrorValue, String ActualValue){
+        Assert.assertEquals(ErrorValue,ActualValue);
     }
 
 
