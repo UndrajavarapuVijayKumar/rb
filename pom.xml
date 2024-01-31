@@ -21,7 +21,6 @@
   </plugins>
   </build>
   <dependencies>
-
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-java</artifactId>
@@ -33,6 +32,12 @@
       <artifactId>testng</artifactId>
       <version>7.9.0</version>
       <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi-ooxml</artifactId>
+      <version>5.2.5</version>
     </dependency>
   </dependencies>
 </project>
