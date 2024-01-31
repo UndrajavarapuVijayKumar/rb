@@ -1,0 +1,44 @@
+WebDriver driver = new ChromeDriver();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+        driver.get("https://mockexam1cpsat.agiletestingalliance.org/");
+        driver.findElement(By.xpath("//li[@class='slideout-toggle menu-item-align-right ']")).click();
+//        JavascriptExecutor js = ((JavascriptExecutor) driver);
+//        WebElement element = driver.findElement(By.linkText("List of Participants"));
+//        js.executeScript("arguments[0].scrollIntoView();",element);
+//        element.click();
+        WebElement element = (WebElement) ListOfElements;
+        scroll(ListOfElements);
+        element.click();
+//        js.executeScript("window.scrollBy(0,1200)");
+//        By search = By.xpath("//input[@placeholder='Search']");
+//        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(search));
+//        Thread.sleep(10000);
+
+        /*try
+        {
+//            wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(search));
+//            wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(search));
+            driver.findElement(By.xpath("//input[@placeholder='Search']")).sendKeys("ch");
+        }
+        catch (Exception e) {
+//            driver.navigate().refresh();
+            System.out.println("asfa");
+            Thread.sleep(5000);
+            WebElement searchInput = driver.findElement(By.xpath("//input[@placeholder='Search']"));
+
+            searchInput.sendKeys("ch");*/
+        WebDriverWait w1=new WebDriverWait(driver,Duration.ofSeconds(30));
+//        w1.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@placeholder='Search']")));
+//        driver.findElement(By.xpath("//input[@placeholder='Search']")).sendKeys("ch");
+
+//        System.out.println(l1.size());
+        w1.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@placeholder='Search']")));
+        driver.findElement(By.xpath("//input[@placeholder='Search']")).sendKeys("ch");
+        List<WebElement> l1 =driver.findElement(By.xpath("//table[@id='footable_350']")).findElements(By.tagName("tr"));
+        System.out.println(l1.size());
+        for(int i=1;i<=l1.size();i++) {
+            Thread.sleep(5000);
+//            w1.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='footable_350']/tbody/tr[\" + i + \"]/td[2]")));
+            System.out.println(driver.findElement(By.xpath("//*[@id='footable_350']/tbody/tr[" + i + "]/td[2]")).getText());
+        }
+    }
