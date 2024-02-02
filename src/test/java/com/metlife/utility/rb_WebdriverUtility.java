@@ -15,7 +15,7 @@ public class rb_WebdriverUtility {
    public static WebDriverWait wait;
         //Anything related to Driver. should be there in this class
     public static void initialize(String browser){
-        switch (PropertyUtils.getProperty("browser")){
+        switch (browser){
             case "ff": case "firefox":
                 driver = new FirefoxDriver();
                 break;
