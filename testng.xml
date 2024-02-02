@@ -1,11 +1,15 @@
-<test name="Regression1" preserve-order="false">
-    <classes>
-        <class name="test.Test1">
-            <methods>
-                <include name="m1"/>
-                <include name="m2"/>
-            </methods>
-        </class>
-        <class name="test.Test2"/>
-    </classes>
-</test>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="RedBus">
+    <test name="Booking">
+        <parameter name="browser" value="chrome"></parameter>
+        <packages>
+            <package name="com.metlife.testsuites"></package>
+        </packages>
+    </test>
+    <test name="booking_firefox">
+        <parameter name="browser" value="firefox"></parameter>
+        <packages>
+            <package name="com.metlife.testsuites"></package>
+        </packages>
+    </test>
+</suite>
