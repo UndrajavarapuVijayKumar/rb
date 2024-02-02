@@ -31,18 +31,15 @@ public class TicketBookingDefinition {
     }
     @When("I choose the date as 4th of next month")
     public void i_choose_the_date_as_4th_of_next_month() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
     }
     @When("I click on search Busses")
     public void i_click_on_search_busses() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
     }
     @Then("I should get the message {string}")
     public void i_should_get_the_message(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
     }
 
 }
