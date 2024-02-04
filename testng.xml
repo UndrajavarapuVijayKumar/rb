@@ -1,13 +1,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="RedBus">
+<suite name="ExecuteTS">
     <test name="Booking">
         <parameter name="browser" value="chrome"></parameter>
-        <packages>
-            <package name="com.metlife.testsuites"></package>
-        </packages>
-    </test>
-    <test name="booking_firefox">
-        <parameter name="browser" value="firefox"></parameter>
         <packages>
             <package name="com.metlife.testsuites"></package>
         </packages>
